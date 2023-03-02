@@ -1,0 +1,370 @@
+@import url(./fonts.css);
+
+/*  폰트 적용 */
+html,
+body {
+  font-family: "Suit", sans-serif;
+  font-weight: 300;
+}
+
+/* 노말라이즈 */
+body,
+ul,
+li,
+h1 {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+:root {
+  --time: all 0.3s;
+  --time-der: all 0.3s 0.2s;
+}
+
+.fl-col {
+  display: flex;
+  flex-direction: column;
+}
+.fl-row {
+  display: flex;
+  flex-direction: row;
+}
+
+/* 사이드바 */
+.nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 90px;
+  height: 100%;
+  background: #1a1c22;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+
+.nav ul li {
+  color: #393b40;
+  display: inline-block;
+  width: 100%;
+  height: 100px;
+  margin-bottom: 1rem;
+}
+.nav ul li:first-child {
+  margin-top: 10px;
+}
+.nav ul li.on {
+  color: #1fcb4f !important;
+}
+
+.nav ul li a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.nav ul li.on a svg path {
+  fill: #1fcb4f !important;
+}
+.menu-tit {
+  display: block;
+}
+
+.left-box {
+  position: absolute;
+  top: 0;
+  left: 100px;
+  width: 18vw;
+  height: calc(100% - 2rem);
+  background: rgba(0, 0, 0, 0);
+  padding: 1rem;
+  color: #fff;
+  opacity: 1;
+  transition: var(--time);
+  justify-content: space-between;
+}
+.right-box {
+  position: absolute;
+  top: 0;
+  right: 20px;
+  left: auto;
+  width: 25vw;
+  height: calc(100% - 2rem);
+  background: rgba(0, 0, 0, 0);
+  opacity: 1;
+  padding: 1rem;
+  color: #fff;
+  transition: var(--time);
+  justify-content: space-between;
+}
+.left-box.on {
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.5s;
+}
+.right-box.on {
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+.btn-box {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.btn-box button {
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  font-size: 14px;
+  border: 0;
+  padding: 8px 30px;
+  cursor: pointer;
+  border-radius: 5px;
+  line-height: 1;
+  margin-right: 8px;
+}
+button.open {
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  font-size: 18px;
+  border: 0;
+  padding: 25px 8px;
+  cursor: pointer;
+  border-radius: 5px;
+  line-height: 1;
+}
+.open {
+  position: absolute;
+  top: 20px;
+  left: 24.5vw;
+  transition: var(--time);
+}
+.open.on {
+  left: 100px;
+  border-radius: 5px;
+  transition: var(--time-der);
+}
+.open i {
+  margin: 0;
+}
+.item {
+  width: calc(100% - 12px);
+  padding: 0 6px;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 8px;
+  text-align: center;
+}
+.item .cont {
+  width: calc(100% - 20px);
+  height: 100%;
+  padding: 10px;
+}
+.item .cont .tit {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.item .cont .tit .ttt {
+  font-size: 14px;
+}
+
+.item .cont .tit .val {
+  font-size: 12px;
+}
+
+.item .cont .tit .val .ddd {
+  position: relative;
+  margin-left: 30px;
+  color: #9a9a9a;
+}
+.item .cont .tit .val .ddd::before {
+  content: "";
+  position: absolute;
+  top: 55%;
+  transform: translateY(-50%);
+  left: -12px;
+  width: 7px;
+  height: 7px;
+  border-radius: 5px;
+}
+.item .cont .tit .val .ddd.one::before {
+  background: #1fcb4f;
+}
+.item .cont .tit .val .ddd.two::before {
+  background: #ffc01e;
+}
+
+.item .cont .info-box {
+  width: 100%;
+  height: 100%;
+  justify-content: space-evenly;
+}
+
+.item .cont .info-box .info {
+  width: 100%;
+  height: 22%;
+  font-size: 13px;
+}
+.item .cont .info-box .info > div:first-child {
+  width: 40px;
+  height: 40px;
+  background: #282c35;
+  border-radius: 8px;
+}
+.item .cont .info-box .info > div:first-child img {
+  width: 30px;
+}
+.info-box .num {
+  padding-left: 1rem;
+  text-align: left;
+}
+.info-box .num .icon {
+  justify-content: center;
+  align-items: center;
+}
+.info-box .num .icon > div {
+  justify-content: center;
+  align-items: center;
+}
+.info-box .num .icon > div > div {
+  display: inline-block;
+}
+.info-box .num .icon .one.date {
+  color: #1fcb4f;
+}
+.info-box .num .icon .two.date {
+  color: #ffc01e;
+  padding-left: 5px;
+}
+.info-box .num .icon .one.temp {
+  color: #00a3ff;
+}
+
+.info-box .num .icon .two.temp {
+  color: #ff6b6b;
+  padding-left: 14px;
+}
+.info-box .num .icon > div img {
+  width: 18px;
+  padding-right: 5px;
+}
+.info-box .num .cloud {
+  color: #1fcb4f;
+}
+
+.it-3 .tab-list {
+  width: 60%;
+  background: #1a1c22;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+.it-3 .tab-list div {
+  width: 25%;
+  padding: 5px 10px;
+  border-radius: 10px;
+  font-size: 12px;
+  cursor: pointer;
+  user-select: none;
+}
+.it-3 .tab-list div.on {
+  background: #1fcb4f;
+  color: #fff;
+}
+.it-3 .tab-cont {
+  height: 80%;
+}
+.it-3 .tab-cont .tcon {
+  height: 100%;
+  display: none;
+  justify-content: space-between;
+}
+.it-3 .tab-cont .tcon.on {
+  display: block;
+}
+.it-3 .tab-cont .tcon .sbox {
+  width: 100%;
+  height: 100%;
+  justify-content: space-between;
+}
+.it-3 .tab-cont .tcon .gr {
+  height: 70%;
+  /* border: 1px solid red; */
+}
+.it-3 .tab-cont .tcon .detail {
+  flex-wrap: wrap;
+  height: 30%;
+}
+.it-3 .tab-cont .tcon .detail .inf {
+  width: 50%;
+  height: 50%;
+  box-sizing: border-box;
+}
+.it-3 .tab-cont .tcon .detail .inf p {
+  padding: 0;
+  margin: 0;
+  font-size: 14px;
+  font-weight: 200;
+  color: #fff;
+}
+.it-3 .tab-cont .tcon .detail .inf p:last-child {
+  color: rgb(255, 255, 255, 0.6);
+  font-size: 16px;
+  letter-spacing: -0.5px;
+}
+
+.item img {
+  height: 100%;
+  display: inline-block;
+}
+
+.item.it-1 {
+  height: 29%;
+}
+
+.item.it-2 {
+  height: 25%;
+}
+.item.it-3 {
+  height: 42%;
+}
+.item.it-4 {
+  height: 25%;
+  padding: 10px;
+}
+
+.item.it-5 {
+  height: 40%;
+  padding: 10px;
+}
+.item.it-6 {
+  height: 25%;
+  padding: 10px;
+}
+
+.dg.ac {
+  display: none;
+}
+
+.dat {
+  font-size: 12px;
+  border: 1px solid rgb(122, 121, 121, 0.6);
+  padding: 2px 5px;
+  border-radius: 6px;
+  font-weight: 200;
+  margin-left: 5px;
+  cursor: pointer;
+}
+.fa-solid {
+  margin-left: 5px;
+}

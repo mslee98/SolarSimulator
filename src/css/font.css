@@ -1,0 +1,38 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "Suit";
+  src: url(./fonts/suit/SUIT-Thin.woff2);
+  font-weight: 100;
+}
+@font-face {
+  font-family: "Suit";
+  src: url(./fonts/suit/SUIT-Light.woff2);
+  font-weight: 200;
+}
+@font-face {
+  font-family: "Suit";
+  src: url(./fonts/suit/SUIT-Regular.woff2);
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Suit";
+  src: url(./fonts/suit/SUIT-Medium.woff2);
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Suit";
+  src: url(./fonts/suit/SUIT-Bold.woff2);
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Suit";
+  src: url(./fonts/suit/SUIT-ExtraBold.woff2);
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "Suit";
+  src: url(./fonts/suit/SUIT-Heavy.woff2);
+  font-weight: 700;
+}
