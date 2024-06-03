@@ -145,7 +145,7 @@ export class Simulator {
         this._setUpDom();
         this._setUpGround();
         this._setUpControls();
-        // this._setUpModel();
+        this._setUpModel();
 
 
         // this._setUpCloud();
@@ -417,15 +417,15 @@ export class Simulator {
         // this.renderer.render(this.scene, this.camera);
     }
 
-    _testModeling() {
+    // _testModeling() {
         
-        this._setUpModel()
-    }
+        // this._setUpModel()
+    // }
 
-    _testVariable() {
-        //변수주고 dirLight 빠르게 돌아가게끔
+    // _testVariable() {
+    //     //변수주고 dirLight 빠르게 돌아가게끔
 
-        this.simulatorYn = true;
-    }
+    //     this.simulatorYn = true;
+    // }
 
 }
